@@ -1,0 +1,616 @@
+{
+	"info": {
+		"_postman_id": "d050d905-1074-48f1-9855-42995c333de6",
+		"name": "Prova2",
+		"description": "Trabalho final da matéria construção de backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33176057",
+		"_collection_link": "https://www.postman.com/pedrohap/workspace/api-empresas/collection/33176057-d050d905-1074-48f1-9855-42995c333de6?action=share&source=collection_link&creator=33176057"
+	},
+	"item": [
+		{
+			"name": "Cargo",
+			"item": [
+				{
+					"name": "BUSCAR TODOS OS CARGOS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/cargos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cargos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CRIANDO CARGOS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nome\": \"Gerente\",\r\n\"descricao\": \"gerencia a loja\",\r\n\"salario\": 4500.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/cargos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cargos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BUSCANDO POR ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cargos/666a356459ce29ec2d803ef6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cargos",
+								"666a356459ce29ec2d803ef6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZAR CARGO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nome\": \"Ureia\",\r\n\"descricao\": \"gerencia a loja\",\r\n\"salario\": 4500.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/cargos/666a356459ce29ec2d803ef6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cargos",
+								"666a356459ce29ec2d803ef6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EXCLUIR CARGO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cargos/666a3f3714c03f90983ab3fe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cargos",
+								"666a3f3714c03f90983ab3fe"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Temos as opções de criar, deletar, atualizar, buscar todos ou individualmente por ID os cargos cadastrados."
+		},
+		{
+			"name": "Funcionario",
+			"item": [
+				{
+					"name": "BUSCAR TODOS OS FUNCIONARIOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/funcionarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CRIAR FUNCIONARIO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nome\": \"Pedro\",\r\n\"cpf\": \"11111111100\",\r\n\"telefone\": \"61983131073\",\r\n\"dataContratacao\": \"01/03/2022\",\r\n\"dataNascimento\": \"05/01/2004\",\r\n\"cargo\": \"666a372059ce29ec2d803efe\",\r\n\"endereco\": \"QNN 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/funcionarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BUSCANDO POR ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/funcionarios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZAR FUNCIONARIO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nome\": \"Pedro\",\r\n\"cpf\": \"11111111100\",\r\n\"telefone\": \"61983131073\",\r\n\"dataContratacao\": \"01/03/2022\",\r\n\"dataNascimento\": \"05/01/2004\",\r\n\"cargo\": \"666a372059ce29ec2d803efe\",\r\n\"endereco\": \"QNN 25\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/funcionarios/666a401714c03f90983ab414",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios",
+								"666a401714c03f90983ab414"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EXCLUIR FUNCIONARIO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/funcionarios/666a401714c03f90983ab414",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios",
+								"666a401714c03f90983ab414"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Temos as opções de criar, deletar, atualizar, buscar todos ou individualmente por ID os funcionarios cadastrados."
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "BUSCAR TODOS OS CLIENTES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CRIAR CLIENTE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nome\": \"Aline\",\r\n\"cpf\": \"07123702182\",\r\n\"telefone\": \"61994136271\",\r\n\"rg\": \"3756378\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BUSCANDO POR ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/clientes/666cc1f1eb8b704852d1e47e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								"666cc1f1eb8b704852d1e47e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZAR CLIENTE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nome\": \"Aline\",\r\n\"cpf\": \"07123702182\",\r\n\"telefone\": \"61994136271\",\r\n\"rg\": \"37563781223\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clientes/666cc1f1eb8b704852d1e47e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								"666cc1f1eb8b704852d1e47e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EXCLUIR CLIENTE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/clientes/666cc1f1eb8b704852d1e47e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								"666cc1f1eb8b704852d1e47e"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Temos as opções de criar, deletar, atualizar, buscar todos ou individualmente por ID os clientes cadastrados."
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "BUSCAR TODOS OS PEDIDOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CRIAR PEDIDO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cliente\": \"Aline Alves\",\r\n\"produtos\": \"shampoo, leite ninho, fralda babysec\",\r\n\"data inicio\": \"14/06/2024\",\r\n\"valorTotal\": \"115.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BUSCAR POR ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pedidos/666ccb513625290eb7f2aa13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos",
+								"666ccb513625290eb7f2aa13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZAR PEDIDO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pedidos/666ccb513625290eb7f2aa13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos",
+								"666ccb513625290eb7f2aa13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EXCLUIR PEDIDO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pedidos/666ccb513625290eb7f2aa13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos",
+								"666ccb513625290eb7f2aa13"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Temos as opções de criar, deletar, atualizar, buscar todos ou individualmente por ID os pedidos cadastrados."
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "BUSCAR TODOS OS PRODUTOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CRIAR PRODUTO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nome\": \"Creme Dental\",\r\n\"marca\": \"Oral B\",\r\n\"dataValidade\": \"25/12/2026\",\r\n\"gramatura\": \"110g\",\r\n\"preço\": 15.00 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BUSCANDO POR ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/produtos/666ccb24d464f88881b06e62",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"produtos",
+								"666ccb24d464f88881b06e62"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZAR PRODUTO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/produtos/666ccb24d464f88881b06e62",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"produtos",
+								"666ccb24d464f88881b06e62"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EXCLUIR PRODUTO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/produtos/666ccb24d464f88881b06e62",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"produtos",
+								"666ccb24d464f88881b06e62"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Temos as opções de criar, deletar, atualizar, buscar todos ou individualmente por ID os produtos cadastrados."
+		}
+	]
+}
